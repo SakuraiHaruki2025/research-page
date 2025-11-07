@@ -1,0 +1,198 @@
+/* --- 基本設定と青の配色 --- */
+:root {
+    --primary-color: #0056b3; /* 濃い青 (リンクやボタン) */
+    --text-color: #0a2e50;    /* 文字色 (濃い紺色) */
+    --text-light: #334e68;  /* 少し薄い文字色 (説明文など) */
+    --bg-color: #f0f4f8;    /* 背景色 (非常に薄い青) */
+    --card-bg: #ffffff;    /* カード背景色 (白) */
+    --header-bg: #d6e6f2;   /* ヘッダー背景色 (少し青み) */
+    --border-color: #cddbea; /* 境界線 (薄い青) */
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding-top: 60px; /* ヘッダーの高さ分 */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #003d80; /* ホバー時さらに濃く */
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+main {
+    max-width: 900px; /* 横幅を少し狭めて見やすく */
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 2rem; /* セクション間の余白 */
+}
+
+/* --- ヘッダー --- */
+.header {
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--primary-color);
+    height: 60px;
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.header h1 a {
+    color: var(--text-color);
+}
+
+/* --- フッター --- */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--header-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* --- カード型デザイン (自己紹介・研究) --- */
+.profile-card,
+.research-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.08); /* 影にも少し青み */
+    border: 1px solid var(--border-color);
+}
+
+/* --- 自己紹介 (Profile) --- */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.profile-image {
+    flex-basis: 30%;
+    min-width: 150px;
+}
+.profile-image img {
+    border-radius: 50%; /* 自画像を円形に */
+    border: 4px solid var(--bg-color);
+}
+.profile-text {
+    flex-basis: 70%;
+}
+
+/* --- 外部リンクボタン --- */
+.external-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* スマホで縦並びにするため */
+}
+
+.link-button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.link-button:hover {
+    background-color: #003d80;
+    color: #ffffff;
+    transform: translateY(-2px); /* 少し浮き上がる */
+}
+
+/* --- 研究紹介 (Research) --- */
+.media-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.video-grid {
+    /* PCでは2列表示 */
+    grid-template-columns: repeat(2, 1fr);
+}
+.image-grid {
+    /* PCでは4枚を2x2で表示 */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.media-item {
+    text-align: center;
+}
+.media-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* --- レスポンシブ対応 (スマートフォンなど) --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* スマホ用にヘッダー高さを調整 */
+    }
+    .header {
+        height: 50px;
+    }
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    /* 自己紹介を縦積みに */
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .profile-image img {
+        max-width: 180px;
+    }
+    .external-links {
+        justify-content: center; /* ボタンを中央揃え */
+    }
+
+    /* メディアグリッドを1列に */
+    .video-grid,
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-card,
+    .research-card {
+        padding: 1.5rem;
+    }
+}
