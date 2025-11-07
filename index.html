@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私の研究紹介ページ</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .video-section, .photo-section {
+            margin-bottom: 40px;
+        }
+        .video-gallery, .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .video-item iframe {
+            width: 100%;
+            height: 200px; /* 適切な高さに調整 */
+            border: none;
+            border-radius: 4px;
+        }
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .caption {
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+        /* 圏論好きなあなたのために：構造とアナロジー */
+        .analogy {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e6f7ff;
+            border-left: 5px solid #007bff;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>私の研究テーマ：[ここに研究タイトル]</h1>
+    <p>このページでは、[ここに研究分野の概要] に関する私の研究成果を公開しています。</p>
+
+    <div class="video-section">
+        <h2>🎥 研究動画（デモンストレーション・解説）</h2>
+        <div class="video-gallery">
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_1" allowfullscreen></iframe>
+                <div class="caption">動画 1: [動画タイトル 1] - 研究の全体像</div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_2" allowfullscreen></iframe>
+                <div class="caption">動画 2: [動画タイトル 2] - 実験セットアップ</div>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_3" allowfullscreen></iframe>
+                <div class="caption">動画 3: [動画タイトル 3] - 結果の分析と考察</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="photo-section">
+        <h2>📸 研究写真（図表・実験風景）</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="photos/photo1.jpg" alt="実験結果グラフ">
+                <div class="caption">写真 1: [グラフ名] - 主要な実験結果</div>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos/photo2.jpg" alt="実験装置">
+                <div class="caption">写真 2: [実験装置名] の全景</div>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos/photo3.jpg" alt="概念図">
+                <div class="caption">写真 3: 研究手法の概念図</div>
+            </div>
+             </div>
+    </div>
+
+    <div class="analogy">
+        <p>
+            💡 <strong>考察のヒント（アナロジー）</strong>：<br>
+            この研究で示される構造は、もしかすると、**圏論**における**関手**のように、あるドメイン（入力）から別のドメイン（出力）への**構造を保った写像**として捉えられるかもしれません。あるいは、**テンソル**のように、異なる座標系や物理量を統合的に扱う表現としても見なせそうです。
+        </p>
+    </div>
+
+    <p style="text-align: center; margin-top: 30px;">
+        ご質問や共同研究にご興味があれば、[連絡先] までご連絡ください。
+    </p>
+
+</div>
+
+</body>
+</html>
